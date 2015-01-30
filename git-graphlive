@@ -8,6 +8,7 @@ defTime=3
 # Command line argument processing
 if [[ $usrLen =~ $numRegex && $usrTime =~ $numRegex ]]; then
     # A valid number of lines and refresh rate were passed in
+    :
 else
 	# Invalid or no lines and refresh rate were provided
 	# so instead, using defaults instead.
@@ -23,4 +24,3 @@ do
     git --no-pager log -$usrLen --graph --all --pretty=format:'%Cgreen%h%Creset -%C(yellow)%d%Creset %s' --abbrev-commit --date=relative
     sleep $usrTime
 done
-
